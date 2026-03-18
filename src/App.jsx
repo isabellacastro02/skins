@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 
-export default function App() {
+function App() {
   return (
     <>
-      <div className="auth-container">
+     <div className="auth-container">
         <div className="auth-background">
           <div className="gradient-orb orb-1"></div>
           <div className="gradient-orb orb-2"></div>
@@ -13,72 +13,70 @@ export default function App() {
 
         <div className="auth-card">
           <div className="auth-header">
-            <h1 className='auth-title'>Bem-vindo</h1>
-            <p className='auth-subtitle'>Entre para continuar</p>
+            <h1>Bem-Vindo</h1>
+            <p>Entre para continuar</p>
           </div>
 
+          <form className='auth-form'>
           <div className="form-group">
             <label htmlFor="usuario">Usuário</label>
             <input 
-            type="text"
-            id='usuario'
-            name='usuario'
-            placeholder='Escolha seu nome de usuario'
-            required
-            />
+              type="text" 
+              id='usuario' 
+              name='usuario' 
+              placeholder='Escolha seu nome de usuário' 
+              required  />
           </div>
 
-            <div className="form-group">
+          <div className="form-group">
             <label htmlFor="email">Usuário ou Email</label>
             <input 
-            type="text"
-            id='email'
-            name='email'
-            placeholder='Digite seu usuario ou email'
-            required
-            />
+              type="text" 
+              id='email' 
+              name='email' 
+              placeholder='Digite seu usuário ou email' 
+              required  />
           </div>
 
-            <div className="form-group">
+          <div className="form-group">
             <label htmlFor="senha">Senha</label>
             <input 
-            type="password"
-            id='senha'
-            name='senha'
-            placeholder='**********'
-            required
-            />
+              type="password" 
+              id='senha' 
+              name='senha' 
+              placeholder='*********' 
+              required  />
           </div>
 
-            <div className="form-group">
+          <div className="form-group">
             <label htmlFor="confirmarSenha">Confirmar Senha</label>
             <input 
-            type="text"
-            id='confirmarSenha'
-            name='confirmarSenha'
-            placeholder='**********'
-            required
-            />
+              type="password" 
+              id='confirmarSenha' 
+              name='confirmarSenha' 
+              placeholder='*********' 
+              required  />
           </div>
 
           <div className="forgot-password">
-            <a href="#esqueci">Esqueceu a senha?</a>
+            <a href="#">Esqueceu a senha?</a>
           </div>
+
           <button type='submit' className='submit-btn'>
-          Entrar / Criar Conta
+            Entrar
           </button>
+          </form>
 
           <div className="auth-footer">
-            <p>
-              <button className='toggle-btn'>
-                Cadastre-se / Login
-              </button>
-            </p>
+            <p>Não tem uma conta?</p>
+            <button className='toggle-btn'>Cadastre-se</button>
           </div>
-          
-        </div> {/* auth-card */}
-      </div> {/* auth-container */}
+
+        </div>
+
+      </div>
     </>
   )
 }
 
+export default App
